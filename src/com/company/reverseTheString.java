@@ -9,8 +9,8 @@ class reverseTheString {
     public void reverseTheString(String word) {
 
         StringBuilder output = new StringBuilder();
-        List<Boolean> capHolder = new ArrayList<>();
-        List<Boolean> spaceHolder = new ArrayList<>();
+        List<Boolean> capHolder = new ArrayList<>(); // creating a truth table for caps
+        List<Boolean> spaceHolder = new ArrayList<>(); // creating a truth table for spaces
         for (int i = 0; i < word.length(); i++) {
             if (Character.isSpaceChar(word.charAt(i))) {
                 spaceHolder.add(true);
@@ -26,6 +26,7 @@ class reverseTheString {
 
         int j = 0;
         for (int i = word.length() - 1; i >= 0; i--) { // i is decrementing and j is incrementing
+            // i is the word (in reverse for loop) and j is the truth table
             if (spaceHolder.get(j)) {
                 output.append(" ");
                 i++;
