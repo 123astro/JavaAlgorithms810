@@ -24,13 +24,12 @@ class arrayOfMultiples {
 
         int[] array = new int[length];
         for (int i = 0; i < length; i++) {
-            int output = ((i + 1) * num1);
-            array[i] = output;
+            array[i] = ((i + 1) * num1);
         }
         System.out.println(Arrays.toString(array));
     }
     public void run(){
-        arrayOfMultiples(5 , 10);
+        arrayOfMultiples(17 , 6);
     }
 }
 
