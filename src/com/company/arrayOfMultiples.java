@@ -11,7 +11,7 @@ class arrayOfMultiples {
             array[i] = ((i + 1) * num1); // take each num1 value and multiply it by the (iterator + 1) and assign
             // result to the array at index i.
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println("Array of Multiples: " + Arrays.toString(array));
     }
     public void run(){
         arrayOfMultiples(17 , 6);

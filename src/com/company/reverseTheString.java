@@ -12,11 +12,13 @@ class reverseTheString {
         List<Boolean> capHolder = new ArrayList<>(); // creating a truth table for caps
         List<Boolean> spaceHolder = new ArrayList<>(); // creating a truth table for spaces
         for (int i = 0; i < word.length(); i++) {
-            if (Character.isSpaceChar(word.charAt(i))) {
-                spaceHolder.add(true);
-            } else {
-                spaceHolder.add(false);
-            }
+//            if (Character.isSpaceChar(word.charAt(i))) {
+//                spaceHolder.add(true);
+//            } else {
+//                spaceHolder.add(false);
+//            }
+            boolean x = (Character.isSpaceChar(word.charAt(i)) ? spaceHolder.add(true) : spaceHolder.add(false));
+
             if (Character.isUpperCase(word.charAt(i))) {
                 capHolder.add(true);
             } else {
@@ -24,28 +26,29 @@ class reverseTheString {
             }
         }
 
-        int j = 0;
-        for (int i = word.length() - 1; i >= 0; i--) { // i is decrementing and j is incrementing
-            // i is the word (in reverse for loop) and j is the truth table
-            if (spaceHolder.get(j)) {
+        int k = 0;
+        for (int i = word.length() - 1; i >= 0; i--) { // i is decrementing and k is incrementing
+            // i is the word (in reverse for loop) and k is the truth table
+            if (spaceHolder.get(k)) {
                 output.append(" ");
                 i++;
             } else {
-                if (capHolder.get(j)) {  //if true Upper case
+                if (capHolder.get(k)) {  //if true Upper case
                     output.append(word.toUpperCase(Locale.ROOT).charAt(i));
-                } else if (!capHolder.get(j)) { // if false lower case
-                    if (word.charAt(i) != ' ') {
+                } else { // else is false for lower case
+                    if (word.charAt(i) != ' ') {  // Not equal to ' ' space
                         output.append(word.toLowerCase(Locale.ROOT).charAt(i));
                     } else {
-                        j--;
+                        k--;
                     }
                 }
             }
-            j++;
+            k++;
         }
-        System.out.println(output);
+        System.out.println("Reverse the string output: " + output);
     }
-    public void run(){
+
+    public void run() {
         reverseTheString("1 23 456");
     }
 }
