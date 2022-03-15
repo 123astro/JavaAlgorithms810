@@ -11,6 +11,8 @@ public class Main {
         result3.run();
         countInstancesOfChar result4 = new countInstancesOfChar('b', "bubble");
         countVowels result5 = new countVowels("bvuibed fiuhvhv ojo vn");
+        removeAllVowels result6 = new removeAllVowels("Keith is dumb");
+
     }
 }
 
