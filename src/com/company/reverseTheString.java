@@ -12,13 +12,11 @@ class reverseTheString {
         List<Boolean> capHolder = new ArrayList<>(); // creating a truth table for caps
         List<Boolean> spaceHolder = new ArrayList<>(); // creating a truth table for spaces
         for (int i = 0; i < word.length(); i++) {
-//            if (Character.isSpaceChar(word.charAt(i))) {
-//                spaceHolder.add(true);
-//            } else {
-//                spaceHolder.add(false);
-//            }
-            boolean x = (Character.isSpaceChar(word.charAt(i)) ? spaceHolder.add(true) : spaceHolder.add(false));
-
+            if (Character.isSpaceChar(word.charAt(i))) {
+                spaceHolder.add(true);
+            } else {
+                spaceHolder.add(false);
+            }
             if (Character.isUpperCase(word.charAt(i))) {
                 capHolder.add(true);
             } else {

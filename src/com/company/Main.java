@@ -9,6 +9,7 @@ public class Main {
         result2.run();
         reverseTheString result3 = new reverseTheString();
         result3.run();
+        countInstancesOfChar result4 = new countInstancesOfChar('b', "bubble");
     }
 }
 
