@@ -40,7 +40,6 @@ import java.util.regex.Matcher;
 public class countVowels {
     public countVowels(String str) {
         int vowelsCount = 0;
-        // Your code here
         Pattern compile = Pattern.compile("[aeiou]");
         Matcher matcher = compile.matcher(str);
         while(matcher.find()) {
