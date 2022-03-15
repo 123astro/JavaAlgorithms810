@@ -10,6 +10,7 @@ public class Main {
         reverseTheString result3 = new reverseTheString();
         result3.run();
         countInstancesOfChar result4 = new countInstancesOfChar('b', "bubble");
+        countVowels result5 = new countVowels("bvuibed fiuhvhv ojo vn");
     }
 }
 
